@@ -6,10 +6,15 @@ $(document).ready(function(){
     const list = new CommentList()
     list.addComment(text, author)
 
-    if (text === "") {
-      alert("You can't submit an empty form. Please enter your comment.")
+    if (text === "" || author === "") {
+      alert("Both inputs are needed.")
     } else {
     $('#comment-list').append(list.render())
     }
+  })
+
+  $('#delete').on('click', function(e) {
+    e.preventDefault()
+    $("li.comment").remove();
   })
 })

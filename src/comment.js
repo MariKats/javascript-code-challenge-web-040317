@@ -5,6 +5,6 @@ class Comment {
   }
 
   render() {
-    return `<li> ${this.author} - ${this.text} </li>`
+    return `<li class="comment"> ${this.author} - ${this.text} <button type="button" id="delete">Delete</button> </li>`
   }
 }
