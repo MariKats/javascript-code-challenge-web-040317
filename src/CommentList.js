@@ -7,8 +7,9 @@ class CommentList {
     return `<ul> ${this.comments.map(comment => comment.render()).join("")} </ul>`
   }
 
-  addComment(string) {
-    const newComment = new Comment(string)
+  addComment(string, author) {
+    const newComment = new Comment(string, author)
+    newComment[author] = string
     this.comments.push(newComment)
   }
 }

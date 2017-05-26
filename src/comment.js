@@ -1,9 +1,10 @@
 class Comment {
-  constructor(text) {
+  constructor(text, author) {
     this.text = text
+    this.author = author
   }
 
   render() {
-    return `<li> ${this.text} </li>`
+    return `<li> ${this.author} - ${this.text} </li>`
   }
 }
